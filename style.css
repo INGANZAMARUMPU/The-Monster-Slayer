@@ -1,0 +1,85 @@
+* {
+	box-sizing: border-box;
+	margin:0;
+  	padding: 0;	
+	text-decoration: none;
+	font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+#app{
+	max-width: 1000px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+h2{
+	text-align: center;
+}
+.head {
+	padding: 1em;
+	width: 100%;
+	margin-bottom: 15px;
+}
+.card {
+	padding: 1em;
+	box-shadow: -1px 1px 5px 0px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+.head .item {
+	display: inline-block;
+	width: 49%;
+	align-items: center;
+}
+#controllers {
+	display: flex;
+	justify-content: center;
+}
+.progress{
+	width: 300px;
+	height: 25px;
+	background-color: lightgray;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+.progression{
+	min-width: 10%;
+	height: 100%;
+	background-color: green;
+	text-align: center;
+	color: white;
+}
+.bg-green {
+	background-color: #afa;
+}
+.bg-white {
+	background-color: white;
+}
+.bg-orange {
+	background-color: orange;
+}
+.bg-red {
+	background-color: red;
+}
+button {
+	height: 40px;
+	border-radius: 5px;
+	padding: 0 10px;
+	margin: 0 10px;
+}
+.log-player{
+	background-color: #CCE;
+	color: #009;
+	padding: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.log-monster{
+	background-color: #ECC;
+	color: #900;
+	padding: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}

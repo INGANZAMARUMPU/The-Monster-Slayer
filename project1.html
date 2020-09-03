@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>The Monster Slayer</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="head">
+			<div id="player" class="item">
+				<h2>Player 1</h2>
+				<div class="progress">
+					<div class="progression" v-bind:style="{width:scr_pl+'%'}">{{ scr_pl }}%</div>
+				</div>
+			</div>
+			<div id="monster" class="item">
+				<h2>Monster</h2>
+				<div class="progress">
+					<div class="progression" v-bind:style="{width:scr_mnstr+'%'}">{{ scr_mnstr }}%</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div id="controllers">
+				<button class="bg-green" v-if='!en_cours' v-on:click="start">New Game</button>
+				<span v-if='en_cours'>
+					<button class="bg-red"v-on:click="attack">Attack</button>
+					<button class="bg-orange" v-on:click="specialAttack">Special Attack</button>
+					<button class="bg-green" v-on:click="heal">Heal</button>
+					<button class="bg-white" v-on:click="giveUp">Give UP</button>
+				</span>
+			</div>
+		</div>
+		<div class="card" v-if="logs.length>0">
+			<div id="result" v-for="log in logs">
+				<div class="log-player" v-if='log.source=="player"'>{{log.message}}</div>
+				<div class="log-monster" v-if='log.source=="monster"'>{{log.message}}</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
